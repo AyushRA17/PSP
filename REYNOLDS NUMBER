@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int main()
+{
+float Re,d,v,Le,u,p;
+u=1.545*pow(10,-3);
+for(p=997.7404;p<=997.9654;p+=0.225)
+{for(v=0.08;v<=0.12;v+=0.01)
+{for(d=0.04;d<=0.08;d+=0.01)
+{Re=(p*v*d)/u;
+printf("\nd=%.2f,v=%.4f,p=%.4f;",d,v,p);
+printf("\n\nRe Value=%f\n",Re);
+if(Re<4000)
+{
+Le=(d*0.06*Re);
+printf("\n\nThis is laminar-transitional\n");
+}
+else
+{
+Le=(d*4.4*pow(Re,0.1667));
+printf("\n\nThis is turbulent\n");
+}
+printf("\n\nLe Value=%f\n",Le);
+continue;
+}}}
+{
+for(p=997.7404;p<=997.9654;p+=0.225)
+{for(v=0.08;v<=0.12;v+=0.01)
+{for(d=0.04;d<=0.08;d+=0.01)
+{Re=(p*v*d)/u;
+printf("\nd=%.2f,v=%.4f,p=%.4f;",d,v,p);
+printf("\n\nRe Value=%f\n",Re);
+if(Re<4000)
+{
+Le=(d*0.06*Re);
+printf("\n\nThis is laminar-transitional\n");
+}
+else
+{
+Le=(d*4.4*pow(Re,0.1667));
+printf("\n\nThis is turbulent\n");
+}
+printf("\n\nMin Entrance Region of Pipe=%f\n",Le);
+continue;
+}}}}}
